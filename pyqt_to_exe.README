@@ -1,0 +1,20 @@
+# Convert PyQt5 app to exe using pyinstaller
+
+
+# define function in Qt Class
+def resource_path(self,relative_path):
+""" Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
+# Use paths for ICON/UI files like the below example.
+image_path = self.resource_path("Converter-GUI.ico")
+
+# Run below command on CLI to generate SPEC FILE
+pyinstaller --onefile your_file.py
+
+# Add path of external files in datas like below, add other icon path and py path as well in spec file.
+a.datas += [('Converter-GUI.ico', 'C:\\Users\\TCK\\Desktop\\Projeler\\Converter-GUI.ico', 'DATA')]
+
+# Finally re-run pyinstaller with spec file
+pyinstaller your_file.spec
