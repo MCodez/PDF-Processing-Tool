@@ -2,5 +2,11 @@
 Idea behind coding such tool is to include all possible features which are required while processing PDF files on daily basis. 
 
 
+PDF Processing Tool has below features - 
+1. Clean & Simple UI
+2. Can merge two PDFs at a time.
+3. Can split PDF file using page ranges and page numbers [ Format : 1-4,8,5,6 ]
+4. Can Encrypt PDF file with provided password.
+5. Can Decrypt PDF file with available password.
 
-Plan is to add all possible options like Splitting, Merging, Encrypting, Decrypting, etc.. Currently only encryption is added. 
+Steps to convert PY to EXE attached in the repository `pyqt_to_exe.README` . Works awesome !!
